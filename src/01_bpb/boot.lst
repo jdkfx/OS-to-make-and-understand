@@ -1,0 +1,5 @@
+     1                                  entry:
+     2 00000000 EB58                        jmp     ipl                 ; IPLへジャンプ
+     3                                  
+     4 00000002 90<rept>                    times   90 - ($ - $$) db 0x90
+     5                                  ipl:
