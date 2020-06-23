@@ -113,7 +113,7 @@ KBC_Cmd_Write:
                                         ; {
         in      al, 0x64                ;   AL = inp(0x64); // KBCステータス
         test    al, 0x01                ;   ZF = AL & 0x01; // 読み込み可能？
-        loopnz  .10L                    ; } while (--cx && !ZF);
+        loopz  .10L                    ; } while (--cx && !ZF);
 
         cmp     cx, 0                   ; if (CX) // 未タイムアウト
         jz      .20E                    ; {

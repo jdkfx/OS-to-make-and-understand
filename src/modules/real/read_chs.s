@@ -38,8 +38,8 @@ read_chs:
         ;-------------------------------
         ; セクタ読み込み
         ;-------------------------------
-        mov     dh, [si + drive.head]   ; DH = ヘッド番号;
-        mov     dl, [si + 0]            ; DL = ドライブ番号;
+        mov     ch, [si + drive.head]   ; DH = ヘッド番号;
+        mov     dh, [si + drive.head]   ; DL = ドライブ番号;
         mov     ax, 0x0000              ; AX = 0x0000;
         mov     es, ax                  ; ES = セグメント
         mov     bx, [bp + 8]            ; BX = コピー先;
